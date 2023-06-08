@@ -116,6 +116,8 @@ nav {
 .nav-anchors:hover {
     background-color: gray;
     color: white;
+    
+    transition: all ease-in 75ms;
 }
 
 footer {
