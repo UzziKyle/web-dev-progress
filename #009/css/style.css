@@ -28,11 +28,13 @@ main {
 
     margin: 0 auto;
     padding-right: 1.5rem;
+
+    transition: all ease-out 100ms;
 }
 
 .card-container:hover {
     box-shadow: 0 0 12px gray;
-    transition: all ease-in-out 200ms;
+    transition: all ease-in 200ms;
 }
 
 /* Clear fix for float items */
@@ -44,13 +46,13 @@ main {
 
 .product-img {
     float: left;
-    width: 40%;
+    width: 50%;
 }
 
 .info-container {
     float: right;
 
-    width: 60%;
+    width: 50%;
 
     padding-top: 3rem;
     padding-left: 1.5rem;
@@ -58,7 +60,7 @@ main {
 
 .product-name {
     font-family: 'DM Serif Display', serif;
-    font-size: 1.75rem;
+    font-size: 1.8rem;
 
     margin-bottom: .5rem;
 }
@@ -74,6 +76,7 @@ main {
 .product-desc {
     color: gray;
 
+    font-size: .85rem;
     line-height: 1.8;
     
     margin-bottom: 3rem;
@@ -110,12 +113,12 @@ main {
     text-shadow: 0 0 2px gray;
 
     box-shadow: 0 0 24px gainsboro;
-
+    
     transition: all ease-in 100ms;
 }
 
 .product-cta:active {
-    background-color: limegreen;
+    background-color: gray;
     text-shadow: 0 0 0;
 
     transition: all ease-in 100ms;
