@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans&family=DM+Serif+Display&display=swap');
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body {
+    font-family: 'DM Sans', sans-serif;
+    margin: 0;
+}
+
+main {
+    min-width: 100%;
+    margin-top: 1rem;
+}
+
+.card-container {
+    box-shadow: 0 0 8px gainsboro;
+    border-radius: 8px;
+    
+    height: auto;
+    width: 600px;
+    max-width: 90%;
+
+    display: flex;
+    overflow: hidden;
+
+    margin: 0 auto;
+    padding-right: 1.5rem;
+}
+
+.card-container:hover {
+    box-shadow: 0 0 12px gray;
+    transition: all ease-in-out 200ms;
+}
+
+/* Clear fix for float items */
+.card-container::after {
+    content: '';
+    display: table;
+    clear: both;
+}
+
+.product-img {
+    float: left;
+    width: 40%;
+}
+
+.info-container {
+    float: right;
+
+    width: 60%;
+
+    padding-top: 3rem;
+    padding-left: 1.5rem;
+}
+
+.product-name {
+    font-family: 'DM Serif Display', serif;
+    font-size: 1.75rem;
+
+    margin-bottom: .5rem;
+}
+
+.product-tagline {
+    color: yellowgreen;
+    font-size: 1.125rem;
+
+    margin-top: 0;
+    margin-bottom: 3rem;
+}
+
+.product-desc {
+    color: gray;
+
+    line-height: 1.8;
+    
+    margin-bottom: 3rem;
+}
+
+.product-price {
+    display: block;
+
+    font-size: 3rem;
+    font-weight: bold;
+
+    margin-bottom: .25rem;
+}
+
+.product-cta {
+    background-color: white;
+    
+    border: none;
+    border-left: 1px solid gray;
+    border-bottom: 1px solid gray;
+
+    padding: .5rem .75rem;
+    margin-bottom: 3rem;
+
+    font-size: 1rem;
+
+    transition: all ease-out 100ms;
+}
+
+.product-cta:hover {
+    background-color: yellowgreen;
+
+    color: white;
+    text-shadow: 0 0 2px gray;
+
+    box-shadow: 0 0 24px gainsboro;
+
+    transition: all ease-in 100ms;
+}
+
+.product-cta:active {
+    background-color: limegreen;
+    text-shadow: 0 0 0;
+
+    transition: all ease-in 100ms;
+}
