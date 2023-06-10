@@ -58,7 +58,12 @@ nav {
     text-decoration: none;
 }
 
-.nav-anchors{ padding: 1rem 2rem; }
+.nav-anchors{ 
+    padding: 1rem 2rem; 
+    border-right: 1px solid gainsboro;
+}
+
+.nav-items .last-item { border: none; }
 
 .nav-anchors:hover, .dropdown:hover { background-color: gainsboro; }
 
@@ -88,7 +93,11 @@ nav {
 .dropdown-anchors {
     width: 100%;
     padding: 1rem;
+
+    border-bottom: 1px solid lightgray;
 }
+
+.dropdown-items .last-item { border: none; }
 
 .dropdown-anchors:hover {
     background-color: gainsboro;
