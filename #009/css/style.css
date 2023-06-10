@@ -20,11 +20,13 @@ main {
     border-radius: 8px;
     
     height: auto;
-    width: 600px;
+    width: 550px;
     max-width: 90%;
 
     display: flex;
-    overflow: hidden;
+    opacity: 0.9;
+
+    overflow-y: hidden;
 
     margin: 0 auto;
     padding-right: 1.5rem;
@@ -34,6 +36,9 @@ main {
 
 .card-container:hover {
     box-shadow: 0 0 12px gray;
+
+    opacity: 1.0;
+
     transition: all ease-in 200ms;
 }
 
@@ -47,6 +52,7 @@ main {
 .product-img {
     float: left;
     width: 50%;
+    height: auto;
 }
 
 .info-container {
