@@ -1,0 +1,116 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 1.125rem;
+    line-height: 1.5;
+}
+
+header {
+    background-color: whitesmoke;
+    padding: 0 2rem;
+    box-shadow: 0 0 8px gray;
+}
+
+/* clearfix */
+header::after {
+    content: '';
+    display: table;
+    clear: both;
+}
+
+h4 {
+    float: left;
+    width: 50%;
+    line-height: 59px;
+    text-transform: uppercase;
+}
+
+nav {
+    float: right;
+    width: 50%;
+}
+
+.nav-list, .dropdown-list {
+    float: right;
+    list-style-type: none;
+    padding: 0;
+}
+
+.nav-items {
+    float: left;
+    position: relative;
+    margin-left: 1rem;
+}
+
+.nav-anchors, .dropdown-anchors {
+    display: inline-block;
+
+    color: black;
+    text-decoration: none;
+}
+
+.nav-anchors{padding: 1rem 3rem;}
+
+.nav-anchors:hover, .dropdown:hover {
+    background-color: gainsboro;
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    position: absolute;
+    display: none;
+    
+    text-align: center;
+    width: 100%;
+    background-color: whitesmoke;
+
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+    overflow: hidden;
+
+    box-shadow: 0 0 8px lightgray;
+
+    z-index: -1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-list {
+    width: 100%;
+}
+
+.dropdown-anchors {
+    width: 100%;
+    padding: 1rem;
+}
+
+.dropdown-anchors:hover {
+    background-color: gainsboro;
+
+    transition: all ease-in-out 100ms;
+}
+
+footer {
+    background-color: whitesmoke;
+
+    position: fixed;
+    bottom: 0;
+
+    width: 100%;
+    padding: 1rem;
+
+    text-align: center;
+}
+
+address {
+    font-style: normal;
+}
