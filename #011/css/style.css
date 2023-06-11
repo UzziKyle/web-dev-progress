@@ -1,0 +1,121 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    line-height: 1.5;
+
+    background-color: whitesmoke;
+
+    counter-reset: part;
+}
+
+header {
+    width: 100%;
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
+
+    background-color: whitesmoke;
+    opacity: 0.95;
+
+    text-align: center;
+    
+    margin-bottom: 2rem;
+
+    box-shadow: 0 0 6px gray;
+}
+
+.title {
+    padding: 2rem 0;
+    opacity: 1;
+    text-transform: uppercase;
+}
+
+.gallery-container {
+    margin: 0 auto;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.gallery {
+    width: 350px;
+    height: 350px; 
+
+    margin-bottom: 2rem;
+
+    border: 1px solid gainsboro;
+    border-radius: 8px;
+
+    overflow: hidden;
+}
+
+a {
+    display: block;
+    height: 80%;
+
+    overflow: hidden;
+}
+
+img {
+    width: 100%;
+}
+
+.img-desc {
+    width: 100%;
+    height: 20%;
+
+    line-height: 67.68px;
+
+    text-align: center;
+    background-color: whitesmoke;
+    border-top: 1px solid gainsboro;
+
+    font-style: italic;
+}
+
+/* Hover Effect */
+.gallery:hover, .gallery:hover a, .gallery:hover a img, .gallery:hover .img-desc { transition: all ease-in-out 100ms;}
+
+.gallery:hover { 
+    border: 1px solid gray; 
+    box-shadow: 0 0 4px gray;
+}
+
+.gallery:hover a { background-color: lightgray; }
+
+.gallery:hover a img { width: 105%; }
+
+
+/* After Hover */
+.gallery, .gallery a, .gallery a img { transition: all ease-out 100ms; }
+
+.part-protagonist::before {
+    counter-increment: part;
+    content: "Part " counter(part) ": ";
+
+    font-style: normal;
+}
+
+footer {
+    background-color: whitesmoke;
+    width: 100%;
+    border-top: 1px solid gray;
+    text-align: center;
+}
+
+address {
+    font-style: normal;
+    margin-bottom: .5rem;
+}
+
+.disclaimer {
+    font-size: .5rem;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+}
