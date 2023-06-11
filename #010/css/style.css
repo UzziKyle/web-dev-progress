@@ -49,6 +49,8 @@ nav {
 .nav-items {
     float: left;
     position: relative;
+
+    padding: 1rem 0;
 }
 
 .nav-anchors, .dropdown-anchors {
@@ -59,13 +61,13 @@ nav {
 }
 
 .nav-anchors{ 
-    padding: 1rem 2rem; 
+    padding: 0 2rem;
     border-right: 1px solid gainsboro;
 }
 
 .nav-items .last-item { border: none; }
 
-.nav-anchors:hover, .dropdown:hover { background-color: gainsboro; }
+.nav-items:hover, .dropdown:hover { background-color: white; }
 
 .dropdown { position: relative; }
 
@@ -90,6 +92,8 @@ nav {
 
 .dropdown-list { width: 100%; }
 
+.dropdown-list .dropdown-items:first-child { padding-top: 1rem; }
+
 .dropdown-anchors {
     width: 100%;
     padding: 1rem;
@@ -100,7 +104,7 @@ nav {
 .dropdown-items .last-item { border: none; }
 
 .dropdown-anchors:hover {
-    background-color: gainsboro;
+    background-color: white;
 
     transition: all ease-in-out 100ms;
 }
