@@ -46,11 +46,13 @@ nav {
     list-style-type: none;
 }
 
-.nav-items {
+.nav-items, .dropdown {
     float: left;
     position: relative;
 
     padding: 1rem 0;
+    margin-right: .8px;
+    width: 120px;
 }
 
 .nav-anchors, .dropdown-anchors {
@@ -61,8 +63,10 @@ nav {
 }
 
 .nav-anchors{ 
-    padding: 0 2rem;
+    text-align: center;
+    width: 100%;
     border-right: 1px solid gainsboro;
+    box-sizing: content-box;
 }
 
 .nav-items .last-item { border: none; }
