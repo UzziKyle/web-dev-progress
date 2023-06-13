@@ -1,5 +1,6 @@
 *, *::before, *::after {
     box-sizing: border-box;
+    
     margin: 0;
 }
 
@@ -27,7 +28,7 @@ header {
 .main-section {
     text-align: center;
 
-    padding-top: 4rem;
+    padding-top: 8rem;
 
     border-bottom: 1px solid gray;
 }
@@ -36,6 +37,7 @@ header {
 
 .main-subtitle {
     text-transform: capitalize;
+
     margin-bottom: 4rem;
 }
 
@@ -44,12 +46,12 @@ header {
     font-weight: normal;
 
     padding: 1.125rem 2.25rem;
-    margin-bottom: 4rem;
+    margin-bottom: 8rem;
 
     border-radius: 4px;
     box-shadow: 0 0 4px gainsboro;
 
-    transition: all ease-out 100ms;
+    transition: all ease-out 50ms;
 }
 
 .cta:hover {
@@ -59,7 +61,7 @@ header {
 
     padding: 1.25rem 2.5rem;
     
-    box-shadow: 0 0 8px gainsboro;
+    box-shadow: 0 0 8px lightgray;
 
     transition: all ease-in 100ms;
 }
@@ -68,7 +70,7 @@ header {
     background-color: bisque;
     font-weight: bolder;
 
-    box-shadow: 0 0 8px lightgray;
+    box-shadow: 0 0 8px gray;
 
     transition: all ease-in-out 50ms;
 }
@@ -88,6 +90,7 @@ header {
 
 .features {
     width: 300px;
+
     margin: 0 1rem 0;
 }
 
@@ -98,6 +101,7 @@ header {
 
 .features-titles {
     text-transform: capitalize;
+
     margin-bottom: 1rem;
 }
 
@@ -112,7 +116,8 @@ header {
 
 footer {
     text-align: center;
-    padding: 1rem 0;
+
+    padding: 2rem 0;
 }
 
 address { font-style: normal; }
@@ -121,21 +126,23 @@ address { font-style: normal; }
 @media (width <= 1000px) {
     .header { padding: 0; }
 
-    .main-section {
-        padding-left: 4rem;
-        padding-right: 4rem;
-    }
-
-    .features-section { padding-top: 2rem; }
-
     .features { 
         min-width: 90%;
+
         margin-bottom: 2rem; 
     }
+
+    .features:last-child { margin-bottom: 0; }
 
     .features-img-container { width: 50%; }
 }
 
 @media (width <= 600px) {
-.features-img-container { width: 100%; }
+    .main-section { padding: 4rem; }
+
+    .cta { margin-bottom: 0;}
+
+    .features-section { padding-top: 2rem; }
+
+    .features-img-container { width: 100%; }
 }
