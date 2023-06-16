@@ -4,34 +4,38 @@
     Bakit hindi mag-inline 'yung mga side-boxes :'(
 
         I have now realized what's causing the problem! I should separate the hover component and the dropdown contents... ah basta let me demonstrate it on my next push.
- -->
-<!DOCTYPE html>
 
-<html lang="Filipino">
-        <head> 
-            <meta charset="UTF-8">
-            <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <title>Boxes</title>
-            <link rel="stylesheet" href="css/style.css">
-        </head>
-        <body>
-            <a href="#"class="box one">
-                <div class="main-box">Isa</div>
-            </a>
-            <a href="#" class="box two">
-                <div class="main-box">Dalawa</div>
-                <div class="side-box two">Dalawa</div>
-            </a>
-            <a href="#" class="box three">
-                <div class="main-box">Tatlo</div>
-                <div class="side-box three">Tatlo</div>
-                <div class="side-box three">Tatlo</div>
-            </a>
-            <a href="#" class="box four">
-                <div class="main-box">Apat</div>
-                <div class="side-box four">Apat</div>
-                <div class="side-box four">Apat</div>
-                <div class="side-box four">Apat</div>
-            </a>
-        </body>
-</html>
+    The following day: I have *fixed* it naaaaaa!
+                        Ang bilis ko lang ding nagawa.
+ -->
+ <!DOCTYPE html>
+
+ <html lang="Filipino">
+         <head> 
+             <meta charset="UTF-8">
+             <meta name="viewport" content="width=device-width, initial-scale=1.0">
+             <title>Boxes</title>
+             <link rel="stylesheet" href="css/style.css">
+         </head>
+         <body>
+             <div class="box">
+                 <a href="#" class="main-box one">Isa</a>
+             </div>
+             <div class="box">
+                 <a href="#" class="main-box two">Dalawa</a>
+                 <a href="#" class="side-box two">Dalawa</a>
+            </div>
+             <div class="box">
+                <a href="#" class="main-box three">Tatlo</a>
+                <a href="#" class="side-box three">Tatlo</a>
+                <a href="#" class="side-box three">Tatlo</a>
+             </div>
+             <div class="box">
+                <a href="#" class="main-box four">Apat</a>
+                <a href="#" class="side-box four">Apat</a>
+                <a href="#" class="side-box four">Apat</a>
+                <a href="#" class="side-box four">Apat</a>
+             </div> 
+         </body>
+ </html>
+ 
