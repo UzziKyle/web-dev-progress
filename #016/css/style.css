@@ -1,0 +1,250 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    
+    margin: 0;
+
+    /* outline: auto; */
+}
+
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 1.125rem;
+    line-height: 1.5;
+
+    background-color: #F7EFE5;
+}
+
+/* HEADER */
+.top-bar {
+    position: fixed;
+    top: 0;
+    
+    width: 100%;
+
+    background-color: #674188;
+
+    box-shadow: 0 0 16px #C3ACD0;
+}
+
+/* clearfix */
+.top-bar::after {
+    content: '';
+    display: table;
+    clear: both;
+}
+
+.title-container {
+    display: flex;
+    float: left;
+
+    height: 59px;
+    width: 50%;
+
+    color: #FFFBF5;
+    text-transform: uppercase;
+    
+    text-shadow: 0 0 4px black;
+
+    padding-left: 2rem; 
+
+    align-items: center;
+}
+
+nav {
+    float: right;
+
+    width: 50%;
+
+    padding-right: 2rem;
+}
+
+.nav-list, .dropdown-content {
+    list-style-type: none;
+
+    padding-left: 0;
+}
+
+.nav-list {
+    float: right;
+}
+
+.nav-items {
+    position: relative;
+    display: inline-block;
+
+    width: 120px;
+
+    padding: 1rem 0;
+    margin-right: 0.8px;
+}
+
+.nav-anchors, .dropdown-anchors {
+    color: #FFFBF5;
+    text-decoration: none;
+}
+
+.nav-anchors {
+    box-sizing: content-box;
+    display: block;
+
+    width: 100%;
+
+    text-align: center;
+
+    border-right: 1px solid #F7EFE5;
+}
+
+.nav-items:last-child .nav-anchors {
+    border-right: none;
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    position: absolute;
+    display: none;
+
+    margin-top: 1rem;
+    background-color: #C3ACD0;
+
+    border: 1px solid #674188;
+    border-top: none;
+}
+
+.dropdown-items {
+    padding: 1rem 3rem 1rem 1.5rem;
+
+    border-top: 1px solid #674188;
+}
+
+.dropdown-items:last-child {
+    border-top: 1px solid #674188;
+    border-bottom: none;
+}
+
+.dropdown-anchors { opacity: .5; }
+
+/* NAV HOVER EFFECTS */
+.nav-items:hover { background-color: #C3ACD0; }
+
+.nav-items:hover .nav-anchors { opacity: .75; }
+
+.nav-items:hover .nav-anchors:hover { opacity: 1; }
+
+.dropdown:hover .dropdown-content { display: block; }
+
+.dropdown-content:hover { opacity: 1; }
+
+.dropdown-items:hover .dropdown-anchors { opacity: .75; }
+
+.dropdown-items:hover .dropdown-anchors:hover { opacity: 1; }
+
+.nav-items:hover, .dropdown:hover, .dropdown-items:hover, .dropdown-anchors:hover { transition: all ease-out 100ms; }
+
+/* NAV AFTER HOVER */
+.nav-items, .dropdown, .dropdown-items, .dropdown-anchors { transition: all ease-in 50ms; }
+
+
+/* MAIN */
+/* INTRODUCTION SECTION */
+.intro-section {
+    padding-top: 8rem;
+
+    text-align: center;
+
+    border-bottom: 1px solid #C3ACD0;
+}
+
+.intro-name {
+    font-size: 4rem;
+    
+    margin-bottom: 2rem;
+}
+
+.name-style {
+    color: #674188;
+    
+    font-weight: bolder;
+}
+
+.intro-desc {
+    font-size: 2rem;
+    text-transform: uppercase;
+
+    margin-bottom: 4rem;
+}
+
+.contact-btn {
+    background-color: #C3ACD0;
+    color: #FFFBF5;
+    font-size: 1rem;
+
+    padding: 1rem;
+    margin-bottom: 8rem;
+
+    border: 3px solid #674188;
+    border-radius: 5px 0px 5px 0;
+}
+
+/* BUTTON EFFECTS */
+.contact-btn:hover {
+    color: white;
+    font-size: 1.25rem;
+
+    transition: all ease-in-out 100ms;
+}
+
+.contact-btn:active {
+    background-color: #674188;
+
+    transition: all ease-in-out 50ms;
+}
+
+.contact-btn { transition: all ease-out 50ms; }
+
+/* FEATURED SKILLS SECTION */
+.skills-section {
+    display: flex;
+
+    background-color: #FFFBF5;
+
+    padding: 4rem 0;
+
+    justify-content: space-evenly;
+
+    border-bottom: 1px solid #C3ACD0;
+}
+
+.skill-container {
+    max-width: 350px;
+}
+
+.skill-name {
+    color: #674188;
+
+    margin-bottom: 1rem;
+}
+
+.img-container {
+    background-color: #F7EFE5;
+    height: 200px;
+
+    border: 1px solid #674188;
+    border-radius: 6px;
+
+    margin-bottom: 2rem;
+}
+
+.skill-desc { line-height: 1.5; }
+
+/* FOOTER */
+footer {
+    width: 100%;
+    
+    text-align: center;
+    text-transform: capitalize;
+
+    padding: 1rem;
+}

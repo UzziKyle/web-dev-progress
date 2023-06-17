@@ -1,0 +1,85 @@
+<!-- 
+    Today, I faced some weird HTML and CSS behaviors.
+
+    Inline-blocks have space in-between them. You need to make alis pa the closing tags for the list items to deal with this annoying shit. Dito ko siya natutunan, take a look: https://css-tricks.com/fighting-the-space-between-inline-block-elements/
+
+    Another weird behavior is that when you set a border width to 1px, it wouldn't be actualy 1px. Sa kaka-inspect ko, I've learned na it'd be just 0.8px. Whyyy??? Wala akong mahanap na suitable answer for this one yet... tinatamad ako e HAHAHA
+
+    ---
+
+    Ilang oras din inabot ko sa paggawa nito ah. Nagtagal talaga ako ng sobra sa dropdown na 'yan! I had to start over again kanina sa dropdown after an hour or two dahil I'm getting nowhere at my first attempt. Nakakalito kasi as in.
+
+    Somehow I got through and I'm happy with the outcome.Bukas ko na lang ulit ituloy. Gawin kong responsive.
+
+    Please tell me I'm getting better na with spacing and color choices. :)
+ -->
+<!DOCTYPE html>
+
+<html lang="eng">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Uzzi's Website</title>
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        <header class="top-bar">
+            <div class="title-container">
+                <h4>Uzzi's Website</h4>
+            </div>
+            <nav>
+                <ul class="nav-list">
+                    <li class="nav-items">
+                        <a href="#" class="nav-anchors">Home</a>
+                    <!-- </li> -->
+                    <li class="nav-items dropdown">
+                        <a href="#" class="nav-anchors">Portfolio</a>
+                        <ul class="dropdown-content">
+                            <li class="dropdown-items">
+                                <a href="#" class="dropdown-anchors">Web Development</a>
+                            <!-- </li> -->
+                            <li class="dropdown-items">
+                                <a href="#" class="dropdown-anchors">Data Analytics</a>
+                            <!-- </li> -->
+                        </ul>
+                    <!-- </li> -->
+                    <li class="nav-items">
+                        <a href="#" class="nav-anchors">About</a>
+                    <!-- </li> -->
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <section class="intro-section">
+                <h1 class="intro-name">Hi, I'm <span class="name-style">Kyle</span>!</h1>
+                <h2 class="intro-desc">Web Developer || Data Analyst</h2>
+                <button class="contact-btn">Connect With Me</button>
+            </section>
+            
+            <section class="skills-section">
+                <div class="skill-container">
+                    <h3 class="skill-name">Web Development</h3>
+                    <div class="img-container"></div>
+                    <p class="skill-desc">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ab odio omnis dolorum quo, expedita consectetur numquam officiis magni, officia quisquam dicta. Voluptatem culpa quod harum eligendi deserunt itaque ex distinctio.</p>
+                </div>
+                <div class="skill-container">
+                    <h3 class="skill-name">Data Analytics</h3>
+                    <div class="img-container"></div>
+                    <p class="skill-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa praesentium illo iusto tempore iure harum nobis quia qui. Animi nihil ullam minus adipisci atque rem qui voluptates repellendus explicabo in.</p>
+                </div>
+                <div class="skill-container">
+                    <h3 class="skill-name">Music Creation</h3>
+                    <div class="img-container"></div>
+                    <p class="skill-desc">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, labore cumque assumenda cupiditate provident aliquid rerum dignissimos accusamus magni animi soluta. Quaerat eligendi rem quibusdam sequi vel nobis explicabo earum?
+                    </p>
+                </div>
+            </section>
+        </main>
+        
+        <footer>
+            <address>© All rights reserved | Uzziel Kyle Ynciong | 2023</address>
+        </footer>
+    </body>
+</html>
