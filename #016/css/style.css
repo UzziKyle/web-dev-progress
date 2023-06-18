@@ -14,16 +14,23 @@ body {
     background-color: #F7EFE5;
 }
 
+/* FONT SIZE RESPONSIVENESS */
+/* Mobile */
+@media only screen and (max-width: 600px) { 
+    body { font-size: 1rem; }
+ }
+
 /* HEADER */
-.top-bar {
-    position: fixed;
+.top-bar {  
+    position: sticky;
+    position: -webkit-sticky;
     top: 0;
     
     width: 100%;
 
     background-color: #674188;
 
-    box-shadow: 0 0 16px #C3ACD0;
+    box-shadow: 0 0 8px #674188;
 }
 
 /* clearfix */
@@ -64,9 +71,7 @@ nav {
     padding-left: 0;
 }
 
-.nav-list {
-    float: right;
-}
+.nav-list { float: right; }
 
 .nav-items {
     position: relative;
@@ -141,18 +146,86 @@ nav {
 
 .dropdown-items:hover .dropdown-anchors:hover { opacity: 1; }
 
-.nav-items:hover, .dropdown:hover, .dropdown-items:hover, .dropdown-anchors:hover { transition: all ease-out 100ms; }
+.nav-items:hover, .dropdown:hover, .dropdown-items:hover, .dropdown-anchors:hover { transition: all ease-out 200ms; }
 
 /* NAV AFTER HOVER */
 .nav-items, .dropdown, .dropdown-items, .dropdown-anchors { transition: all ease-in 50ms; }
 
+/* NAV RESPONSIVENESS */
+/* Mobile */
+@media only screen and (max-width: 600px) {
+    .top-bar {
+        position: relative;
+
+        box-shadow: none;
+    }
+    
+    .title-container {
+        float: none;
+        display: block;
+
+        height: fit-content;
+        width: 100%;
+
+        border-bottom: 1px solid black;
+    }
+
+    h4 {
+        display: block;
+
+        padding: 1rem 0;
+    }
+
+    nav {
+        float: none;
+
+        width: 100%;
+
+        padding: 0;
+    }
+
+    .nav-list { float: none; }
+
+    .nav-items {
+        display: block;
+
+        width: 100%;
+
+        padding: .5rem 0;
+
+        margin-right: 0;
+    }
+
+    .nav-items:last-child { box-shadow: 0 1px black; }
+
+    .nav-anchors {
+        box-sizing: border-box;
+        display: inline;
+
+        text-align: left;
+        
+        opacity: .75;
+
+        padding-left: 2rem;
+
+        border-right: none;
+    }
+
+    .nav-items:hover .dropdown-content { display: none; }
+
+    .nav-items:hover .nav-anchors { opacity: .75; }
+
+    .nav-items:hover .nav-anchors:hover { opacity: 1; }
+
+    .nav-items:hover { background-color: #674188; }
+}
 
 /* MAIN */
 /* INTRODUCTION SECTION */
 .intro-section {
-    padding-top: 8rem;
-
     text-align: center;
+
+    padding-top: 8rem;
 
     border-bottom: 1px solid #C3ACD0;
 }
@@ -178,7 +251,7 @@ nav {
 
 .contact-btn {
     background-color: #C3ACD0;
-    color: #FFFBF5;
+    color: #674188;
     font-size: 1rem;
 
     padding: 1rem;
@@ -190,19 +263,31 @@ nav {
 
 /* BUTTON EFFECTS */
 .contact-btn:hover {
-    color: white;
     font-size: 1.25rem;
 
-    transition: all ease-in-out 100ms;
+    transition: all ease-out 100ms;
 }
 
 .contact-btn:active {
     background-color: #674188;
+    color: #FFFBF5;
 
-    transition: all ease-in-out 50ms;
+    transition: all ease 1ms;
 }
 
-.contact-btn { transition: all ease-out 50ms; }
+.contact-btn { transition: all ease-in 50ms; }
+
+/* INTRO SECTION RESPONSIVENESS */
+/* Mobile */
+@media only screen and (max-width: 600px) {
+    .intro-section { padding-top: 4rem; }
+
+    .intro-name { font-size: 3rem; }
+
+    .intro-desc { font-size: 1.5rem; }
+
+    .contact-btn { margin-bottom: 4rem;}
+}
 
 /* FEATURED SKILLS SECTION */
 .skills-section {
@@ -213,12 +298,14 @@ nav {
     padding: 4rem 0;
 
     justify-content: space-evenly;
+    flex-wrap: wrap;
 
     border-bottom: 1px solid #C3ACD0;
 }
 
 .skill-container {
     max-width: 350px;
+    width: 100%;
 }
 
 .skill-name {
@@ -228,8 +315,9 @@ nav {
 }
 
 .img-container {
-    background-color: #F7EFE5;
     height: 200px;
+
+    background-color: #F7EFE5;
 
     border: 1px solid #674188;
     border-radius: 6px;
@@ -239,6 +327,16 @@ nav {
 
 .skill-desc { line-height: 1.5; }
 
+/* SKILLS SECTION RESPONSIVENESS */
+/* Mobile */
+@media only screen and (max-width: 600px) {
+    .skills-section { padding: 2rem 0; }
+
+    .skill-container { margin-bottom: 2rem; }
+
+    .skill-container:last-child { margin-bottom: none; }
+}
+
 /* FOOTER */
 footer {
     width: 100%;
@@ -247,4 +345,10 @@ footer {
     text-transform: capitalize;
 
     padding: 1rem;
+}
+
+/* FOOTER RESPONSIVENESS */
+/* Mobile */
+@media only screen and (max-width: 600px) {
+    footer { padding: 2rem; }
 }
