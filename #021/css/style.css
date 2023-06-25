@@ -1,0 +1,63 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    
+    margin: 0;
+}
+
+body {
+    display: flex;
+
+    height: 100vh;
+
+    align-items: center;
+    justify-content: center;
+
+    flex-direction: column;
+
+    background-image: linear-gradient(to bottom right, rgb(0, 255, 0, 0.75), rgb(0, 0, 255, .75));
+
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 1.5rem;
+}
+
+h1 {
+    letter-spacing: 4px;
+    font-weight: bolder;
+    text-transform: uppercase;
+    text-shadow: 0 0 4px rgb(200, 250, 255, 0.5);
+}
+
+h1:hover {
+    font-size: 3em;
+    text-shadow: 0 0 8px rgb(200, 250, 255, 1);
+
+    transition: all ease-in-out 100ms;
+}
+
+p {
+    position: absolute;
+    bottom: 0;
+
+    margin-bottom: 1rem;
+
+    color: rgb(200, 250, 255, 0.75);
+}
+
+p::after {
+    content: '';
+    display: block;
+
+    width: 0;
+    height: 2px;
+    
+    background-color: rgb(200, 250, 255, 0.75);
+
+}
+
+h1, p::after {
+    transition: all ease-in 100ms;
+}
+
+p:hover::after {
+    width: 100%;
+}
