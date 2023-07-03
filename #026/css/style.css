@@ -2,8 +2,6 @@
     box-sizing: border-box;
 
     margin: 0;
-
-    /* outline: auto; */
 }
 
 body {
@@ -77,6 +75,8 @@ main {
 }
 
 aside {
+    width: 25%;
+
     background-color: green;
     color: whitesmoke;
 
@@ -85,17 +85,41 @@ aside {
     border-right: 2px solid black;
 }
 
-aside > h3, aside > div {
+.button-is-clicked {
+    background-color: #4F709C;
+}
+
+.circle.button-is-clicked {
+    border: 2px solid #213555;
+}
+
+aside h3, aside div {
     margin-bottom: 1rem;
 }
 
-aside > div:last-child {
-    margin-bottom: 0;
+aside div:last-of-type {
+    margin-bottom: 2rem;
 }
 
-aside > div::before {
+aside div::before {
     content: counter(exercise) ".";
     counter-increment: exercise;
+}
+
+button {
+    width: 50%;
+    
+    font-size: 1em;
+
+    padding: 1rem 0;
+    margin: 0 auto;
+
+    border-radius: 4px;
+}
+
+.is-clicked {
+    background-color: #D8C4B6;
+    color: #213555;
 }
 
 footer {
