@@ -1,0 +1,54 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+
+    margin: 0;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    height: 100vh;
+
+    background-color: whitesmoke;
+
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 1.5rem;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.shape {
+    align-self: center;
+    height: 200px;
+    width: 200px;
+}
+
+.is-circle {
+    background-color: plum;
+    border-radius: 50%;
+}
+
+.is-square {
+    background-color: seagreen;
+}
+
+.is-triangle {
+    background-color: darkblue;
+    clip-path: polygon(0% 100%, 50% 0%, 100% 100%);
+}
+
+.btn-container {
+    display: flex;
+    gap: 1rem;
+}
+
+button {
+    padding: 1rem 2rem;
+    border-radius: 4px;
+}
