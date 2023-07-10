@@ -1,0 +1,109 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 1.125rem;
+    line-height: 1.6;
+
+    background-color: whitesmoke;
+
+    overflow: hidden;
+}
+
+.offsite-container {
+    position: fixed;
+    top: 0;
+    left: -100vw;
+    bottom: 0;
+
+    width: 100vw;
+
+    background-color: black;
+
+    padding-top: 1rem;
+
+    transition: all ease-in-out 100ms;
+}
+
+button.menu-close {
+    position: absolute;
+    right: 0;
+
+    background-color: transparent;
+    
+    margin-right: 1rem;
+    border: none;
+}
+
+button.menu-close, a {
+    color: whitesmoke;
+}
+
+button.menu-close::after {
+    position: absolute;
+    display: block;
+    content: '';
+
+    background-color: whitesmoke;
+    height: 2px;
+    width: 0;
+
+    transition: all ease-in-out 100ms;
+}
+
+button.menu-close:hover::after {
+    width: 100%;
+}
+
+nav {
+    margin-top: 7rem;
+}
+
+a {
+    display: block;
+    text-decoration: none;
+
+    padding: .5rem 0 .5rem 4rem;
+}
+
+a:hover {
+    background-color: gray;
+    color: white;
+}
+
+.onsite-container {
+    padding-top: 8rem;
+    padding-left: 4rem;
+}
+
+p {
+    margin-bottom: 4rem;
+}
+
+button.menu-open {
+    padding: 1rem 2rem;
+    border-radius: 4px;
+
+    transition: all ease-in-out 100ms;
+}
+
+button.menu-open:hover {
+    box-shadow: 0 0 4px gray;
+}
+
+button.menu-open.menu-is-open {
+    background-color: black;
+    color: whitesmoke;
+    border: 2px solid gray;
+}
+
+.menu-is-open .offsite-container {
+    transform: translateX(100vw);
+
+    transition: all ease-in-out 200ms;
+}
