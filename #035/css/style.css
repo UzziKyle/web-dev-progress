@@ -1,0 +1,50 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+
+    margin: 0;
+
+    /* outline: auto; */
+}
+
+body {
+    background-color: whitesmoke;
+    font-size: 1.5rem;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.txt-style {
+    position: relative;
+    display: inline-block;
+    color: blue;
+}
+
+.txt-style::after {
+    position: absolute;
+    bottom: 0;
+    content: '';
+    display: block;
+    background-color: blue;
+    height: 4px;
+    width: 0;
+
+    transition: all ease-in-out 1s;
+}
+
+.txt-style:hover::after {
+    width: 100%;
+}
+
+footer {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+    padding-bottom: 1rem;
+}

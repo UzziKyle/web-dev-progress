@@ -1,0 +1,123 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+
+    margin: 0;
+    padding: 0;
+
+    /* outline: auto; */
+}
+
+body {
+    background-color: whitesmoke;
+    color: gainsboro;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 1.125rem;
+    line-height: 1.5;
+}
+
+[data-theme="blue"] {
+    background-color: darkblue;
+}
+
+[data-theme="red"] {
+    background-color: darkred;
+}
+
+[data-theme="green"] {
+    background-color: darkgreen;
+}
+
+.accordion-container {
+    background-color: black;
+    margin-top: 1rem;
+    margin-left: 2rem;
+    max-width: 750px;
+}
+
+.accordion-container > h1 {
+    padding-left: 2rem;
+}
+.accordion {
+    position: relative;
+}
+
+.accordion::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(240, 240, 240, 0.75);
+    width: 2rem;
+}
+
+.accordion__header button {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+
+    background-color: transparent;
+    color: inherit;
+    line-height: inherit;
+    font-size: inherit;
+
+    padding: 1rem 2rem 1rem 4rem;
+    border: transparent;
+}
+
+div.minus {
+    display: none;
+}
+
+div.plus {
+    display: inline-block;
+}
+
+.accordion.is-open div.minus {
+    display: inline-block;
+}
+
+.accordion.is-open div.plus {
+    display: none;
+}
+
+.accordion__content {
+    display: none;
+    margin-left: 4rem;
+    margin-right: 1rem;
+    padding-bottom: 1rem;
+}
+
+.accordion.is-open .accordion__content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    gap: 1rem;
+}
+
+.box {
+    height: 100px;
+    min-width: 100px;
+    border: 1px solid black;
+}
+
+[data-theme="blue"] .box {
+    background-color: blue;
+}
+
+[data-theme="red"] .box {
+    background-color: red;
+}
+
+[data-theme="green"] .box {
+    background-color: green;
+}
+
+a {
+    color: inherit;
+}
+
+a:hover {
+    color: grey;
+}

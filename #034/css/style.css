@@ -1,0 +1,57 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    /* outline: auto; */
+}
+
+body {
+    background: linear-gradient(
+        to bottom right,
+        whitesmoke,
+        gray
+    );
+    height: 100%;
+    min-height: 100vh;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 1.125rem;
+    line-height: 1.5;
+    padding: 1.125rem;
+}
+
+main {
+    background-color: whitesmoke;
+    width: max-content;
+    padding: 1rem; 
+    border: 1px solid black;
+    box-shadow: 0 -8px black;
+}
+
+main > h2 {
+    text-transform: capitalize;
+    color: rgba(0, 0, 0, 0.9);
+}
+
+main > h2::after {
+    content: '';
+    display: block;
+    height: 4px;
+    width: 100%;
+    background: linear-gradient(
+        to right,
+        yellow,
+        gold
+    );
+    box-shadow: 0 0 8px lightgoldenrodyellow;
+    margin-bottom: 1rem;
+}
+
+main > ol {
+    color: rgba(0, 0, 0, 0.8);
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    color: rgba(0, 0, 0, 0.7);
+    margin-bottom: 1rem;
+}

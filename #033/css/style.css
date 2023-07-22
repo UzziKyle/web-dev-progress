@@ -1,0 +1,29 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+
+    margin: 0;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    height: 100vh;
+
+    background-color: whitesmoke;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+main {
+    font-size: 2rem;
+    text-align: center;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 1rem;
+
+    font-size: 1.5rem;
+}
