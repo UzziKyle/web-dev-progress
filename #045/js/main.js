@@ -1,4 +1,4 @@
-// It's working!
+// It's working! Natapos din sa wakas!
 const carousel = document.querySelector('.carousel')
 const prevButton = carousel.querySelector('.prev-button')
 const nextButton = carousel.querySelector('.next-button')
@@ -92,4 +92,12 @@ dots.forEach(dot => {
 
         dot.classList.add('is-selected')
     })
+})
+
+
+const slideWidth = slides[0].getBoundingClientRect().width
+console.log(slideWidth)
+
+slides.forEach((slide, index) => {
+    slide.style.left = slideWidth * index + 'px'
 })
