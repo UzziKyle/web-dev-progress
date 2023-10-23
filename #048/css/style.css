@@ -1,0 +1,38 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+.box {
+    padding: 1.5rem 1rem;
+    margin-top: 0.5rem;
+    width: max-content;
+    height: fit-content;
+}
+
+.box1 {
+    background-color: lightgreen;
+}
+
+.box2 {
+    background-color: green;
+}
+
+.box3 {
+    width: 300px;
+    background-color: darkgreen;
+    color: gainsboro;
+}
+
+button {
+    font-weight: bold;
+    padding: 1rem 2rem;
+    border: 5px solid black;
+    border-radius: 25px;
+    margin-top: 1rem;
+    margin-left: 1rem;
+}
+
+button:active {
+    background-color: gainsboro;
+}
