@@ -1,0 +1,72 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    /* outline: auto; */
+}
+
+body {
+    background-color: whitesmoke;
+    font-size: 2rem;
+}
+
+.main-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+button.open-modal {
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+.modal-overlay {
+    position: fixed;
+    opacity: 0;
+    z-index: 0;
+}
+
+.modal-is-open .modal-overlay {
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    opacity: 1;
+    z-index: 1;
+    background-color: gainsboro;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    height: 400px;
+    width: 300px;
+    background-color: whitesmoke;
+    border: 1px solid black;
+    border-radius: 10px;
+    box-shadow: 0 0 5px black;
+}
+
+button.close-modal {
+    position: absolute;
+    top: -.65rem;
+    right: -.65rem;
+    height: 2rem;
+    width: 2rem;
+    border-radius: 50%;
+}
+
+button {
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: black;
+    color: whitesmoke;
+}
