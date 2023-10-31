@@ -1,0 +1,57 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+
+    /* outline: auto; */
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    height: 100vh;
+    font-size: 50px;
+}
+
+button {
+    height: 100px;
+    width: 250px;
+    font-size: inherit;
+    color: lightblue;
+    background: black;
+    border: 5px solid lightblue;
+    transition-property: color, background, border, box-shadow;
+    transition-duration: 1s;
+    transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+button:hover {
+    color: black;
+    background: lightblue;
+    border: 5px solid black;
+    box-shadow: 0 0 5px 5px lightblue;
+}
+
+
+/* Exercise
+Create the following transitions:
+
+1. Create an element.
+2. Change its opacity from 1 to 0 over 1 second when you hover on it.
+3. Try using ease, ease-in, ease-out, ease-in-out timing functions.
+4. Create your own timing function with Cubic bezier. */
+.element {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: black;
+    border: 5px solid lightblue;
+    opacity: 1;
+    transition: opacity 1s cubic-bezier(1,.24,0,.81);
+}
+
+.element:hover {
+    opacity: 0;
+}
