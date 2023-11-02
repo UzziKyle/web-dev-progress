@@ -18,8 +18,8 @@ body {
 .shadow {
     position: absolute;
     background-color: black;
-    height: 130px;
-    width: 130px;
+    height: 50px;
+    width: 50px;
     transform: translateZ(-10px);
     /* animation: heartbeat 1s 1s infinite ease; */
 }
@@ -30,11 +30,11 @@ body {
     align-items: center;
     position: relative;
     background-color: red;
-    height: 120px;
-    width: 120px;
+    height: 40px;
+    width: 40px;
     transform-style: preserve-3d;
     transform: rotate(45deg);
-    margin: 0 75px;
+    margin: 0 50px;
 }
 
 .shadow::before, .shadow::after, .heart::before, .heart::after {
@@ -43,36 +43,36 @@ body {
 }
 
 .shadow::before, .shadow::after {
-    height: 130px;
-    width: 130px;
+    height: 50px;
+    width: 50px;
     background-color: darkred;
     border-radius: 50%;
 }
 
 .shadow::before {
-    left: -65px;
+    left: -25px;
     top: 0;
 }
 
 .shadow::after {
-    top: -65px;
+    top: -25px;
     left: 0;
 }
 
 .heart::before, .heart::after {
-    height: 120px;
-    width: 120px;
+    height: 40px;
+    width: 40px;
     background-color: red;
     border-radius: 50%;
 }
 
 .heart::before {
-    left: -60px;
+    left: -20px;
     top: 0;
 }
 
 .heart::after {
-    top: -60px;
+    top: -20px;
     left: 0;
 }
 
