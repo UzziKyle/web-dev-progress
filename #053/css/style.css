@@ -1,0 +1,88 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+.btn-one {
+    height: 50px;
+    width: 100px;
+    color: green;
+    border: 2px solid green;
+}
+
+.btn-one:hover {
+    cursor: pointer;
+    color: darkgreen;
+    background-color: mintcream;
+    border: 2px solid mediumseagreen;
+}
+
+.btn-one.is-clicked {
+    color: darkgreen;
+    background-color: mintcream;
+    border: 2px solid mediumseagreen;
+    animation: is-clicked-btn-one 3s;
+}
+
+@keyframes is-clicked-btn-one {
+    50% {
+        translate: 500px 0;
+    }
+    100% {
+        translate: 500px 220px;
+    }
+}
+
+.btn-two {
+    height: 50px;
+    width: 100px;
+    color: maroon;
+    border: 2px solid maroon;
+    transition: transform 2s 0.5s ease-in-out;
+}
+
+.btn-two:hover {
+    cursor: pointer;
+    color: black;
+    background-color: pink;
+    border: 2px solid black;
+}
+
+.btn-two.is-clicked {
+    color: black;
+    background-color: pink;
+    border: 2px solid black;
+    transform: scale(2) translate(20px, 100px);
+}
+
+.btn-three {
+    height: 50px;
+    width: 100px;
+    color: lightblue;
+    background-color: gray;
+    border: 2px solid lightblue;
+    transition: transform 2s 0.5s ease-in-out;
+}
+
+.btn-three:hover {
+    cursor: pointer;
+    color: navy;
+    background-color: darkgray;
+    border: 2px solid navy;
+}
+
+.btn-three.is-clicked {
+    color: navy;
+    background-color: darkgray;
+    border: 2px solid navy;
+    animation: is-clicked-btn-three 5s;
+}
+
+@keyframes is-clicked-btn-three {
+    25% {
+        rotate: 30deg;
+    }
+    75% {
+        rotate: 90deg;
+    }
+}
